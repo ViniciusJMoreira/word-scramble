@@ -19,6 +19,7 @@ body {
   width: 450px;
   border-radius: 7px;
   background-color: #fff;
+  margin: 0 15px;
 }
 
 .container h2 {

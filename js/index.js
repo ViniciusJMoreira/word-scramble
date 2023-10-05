@@ -16,7 +16,7 @@ const initTime = maxTime => {
       return timeText.innerText = maxTime;
     }
     clearInterval(timer);
-    alert('O tempo acabou! ' +correctWord.toLocaleUpperCase()+ ' é a palavra correta.');
+    alert(`Time off! ${correctWord.toUpperCase()} was the correct word`);
     initGame()
   }, 1000)
 }
@@ -40,11 +40,11 @@ const initGame = () => {
 const checkWord = () => {
   let userWord = inputField.value.toLocaleLowerCase();
   console.log(userWord)
-  if(!userWord) return alert("Ponha a porra da palavra");
+  if(!userWord) return alert("Please enter the word to check!");
 
-  if(userWord !== correctWord) return alert('Ta errado seu cuzao');
+  if(userWord !== correctWord) return alert(`Oops! ${userWord} is not a correct word`);
 
-  alert('Parabéns! '+userWord.toLocaleUpperCase()+' é a palavra certa, seu BOSTA.');
+  alert(`Congrats! ${correctWord.toUpperCase()} is the correct word`);
   initGame();
 }
 
