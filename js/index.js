@@ -29,12 +29,12 @@ const initGame = () => {
     let j = Math.floor(Math.random() * (i + 1));
     [wordArray[i], wordArray[j]] = [wordArray[j], wordArray[i]];
   }
+  if(wordArray.length > 6) wordText.classList.add("max-word");else wordText.classList.remove("max-word");
   wordText.textContent = wordArray.join("");
   hintText.textContent = randomObj.hint;
   correctWord = randomObj.word.toLocaleLowerCase();
   inputField.value = "";
   inputField.setAttribute("maxlength", correctWord.length);
-  console.log(randomObj)
 }
 
 const checkWord = () => {
