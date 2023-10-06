@@ -29,7 +29,7 @@ const initTime = maxTime => {
 }
 
 const initGame = () => {
-  // initTime(30)
+  initTime(30)
   let randomObj = words[Math.floor(Math.random() * words.length)]; //getting random object from words
   let wordArray = randomObj.word.split(""); // splitting wach letter of randon word
   for (let i = wordArray.length - 1; i > 0; i--) {
