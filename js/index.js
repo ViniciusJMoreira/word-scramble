@@ -29,7 +29,7 @@ const initTime = maxTime => {
 }
 
 const initGame = () => {
-  initTime(30)
+  // initTime(30)
   let randomObj = words[Math.floor(Math.random() * words.length)]; //getting random object from words
   let wordArray = randomObj.word.split(""); // splitting wach letter of randon word
   for (let i = wordArray.length - 1; i > 0; i--) {
@@ -46,20 +46,21 @@ const initGame = () => {
 
 const checkWord = () => {
   let userWord = inputField.value.toLocaleLowerCase();
-  console.log(userWord)
   if(!userWord) {
-
+    inputField.classList.add('inputAnimation')
     validInput.classList.add('word-wrong');
     validInput.textContent = 'Please enter the word to check!';
+    const animationTime = setInterval(() => {inputField.classList.remove('inputAnimation'); clearInterval(animationTime)}, 1000*1.5)
   } else if(userWord !== correctWord) {
+    inputField.classList.add('inputAnimation')
     validInput.classList.add('word-wrong');
     validInput.textContent = `Oops! ${userWord} is not a correct word`;
+    const animationTime = setInterval(() => {inputField.classList.remove('inputAnimation'); clearInterval(animationTime)}, 1000*1.5)
   } else {
     alert(`Congrats! ${correctWord.toUpperCase()} is the correct word`);
     initGame();
   }
 }
-
 
 window.addEventListener('DOMContentLoaded', initGame);
 refreshBtn.addEventListener('click', initGame);

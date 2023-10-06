@@ -68,6 +68,19 @@ body {
   border: .0625rem solid #aaa;
 }
 
+@keyframes inputAnimation {
+  20% {
+    transform: translateX(-2%);
+  }
+  80% {
+    transform: translateX(2%);
+  }
+}
+
+.inputAnimation {
+  animation: inputAnimation .4s ease-in ;
+}
+
 .word-wrong {
   color: #ff1d1d;
 }
