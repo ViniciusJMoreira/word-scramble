@@ -101,12 +101,9 @@ body {
   }
 
   .content .word {
-    font-size: 1.56rem;
+    font-size: 1.72rem;
     font-weight: bold;
-  }
-
-  .max-word {
-    letter-spacing: .8rem!important;
+    letter-spacing: .8rem;
   }
 
   .details p {
@@ -114,8 +111,23 @@ body {
   }
 
   .content input {
-    height: 3.4rem;
     font-size: 1rem;
+  }
+
+  .buttons button {
+    height: 3.6rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .content .word {
+    font-size: 1.62rem;
+    letter-spacing: .7rem;
+  }
+
+  .content input {
+    height: 3.4rem;
   }
 
   .buttons button {
