@@ -52,7 +52,6 @@ body {
 .details p {
   font-size: 1.125rem;
   margin-bottom: .625rem;
-
 }
 
 .details p b {
@@ -97,15 +96,29 @@ body {
 @media (max-width: 450px) {
   .container {
     width: 100%;
+    margin: 0;
+    border-radius: 0;
   }
 
-  
-.content .word {
-  font-size: 1.86rem;
+  .content .word {
+    font-size: 1.56rem;
+    font-weight: bold;
   }
 
   .max-word {
-    font-size: 1.38rem!important;
-    letter-spacing: 1rem!important;
+    letter-spacing: .8rem!important;
+  }
+
+  .details p {
+    font-size: 1rem;
+  }
+
+  .content input {
+    height: 3.4rem;
+    font-size: 1rem;
+  }
+
+  .buttons button {
+    font-size: .9rem;
   }
 }
