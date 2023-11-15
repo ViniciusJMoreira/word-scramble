@@ -29,6 +29,7 @@ const initTime = maxTime => {
 }
 
 const initGame = () => {
+  timeText.classList.remove('word-wrong')
   initTime(30)
   let randomObj = words[Math.floor(Math.random() * words.length)]; //getting random object from words
   let wordArray = randomObj.word.split(""); // splitting wach letter of randon word
